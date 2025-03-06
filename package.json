@@ -40,7 +40,7 @@
     "riot.js"
   ],
   "dependencies": {
-    "riot-cli": "^2.3.12",
+    "riot-cli": "git+https://github.com//Holdmyticket/riot-cli.git#v2.4.0",
     "riot-compiler": "^3.5.2",
     "riot-observable": "^3.0.0",
     "riot-tmpl": "^3.0.8",
@@ -60,10 +60,10 @@
     "jsdom": "^26.0.0",
     "karma": "^6.4.4",
     "karma-chrome-launcher": "^2.2.0",
-    "karma-coverage": "^1.1.2",
+    "karma-coverage": "^2.2.0",
     "karma-mocha": "^2.0.1",
-    "karma-rollup-preprocessor": "^6.0.0",
-    "karma-sauce-launcher": "^4.3.6",
+    "karma-rollup-preprocessor": "^7.0.0",
+    "karma-sauce-launcher": "^4.1.4",
     "mocha": "^11.1.0",
     "rollup": "^4.34.9",
     "rollup-plugin-alias": "1.4.0",
