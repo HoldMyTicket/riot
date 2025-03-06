@@ -3,6 +3,7 @@ const commonjs = require('rollup-plugin-commonjs'),
   buble = require('rollup-plugin-buble')
 
 module.exports = {
+  input: 'lib/riot.js',
   output: {
     name: 'riot',
     format: 'umd',
