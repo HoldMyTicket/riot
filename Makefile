@@ -64,10 +64,11 @@ raw:
 	# build riot
 	@ mkdir -p $(DIST)
 	# Default builds UMD
-	@ $(ROLLUP) lib/riot.js --config $(CONFIG)rollup.config.js > $(DIST)riot.js
-	@ $(ROLLUP) lib/riot+compiler.js --config $(CONFIG)rollup.config.js > $(DIST)riot+compiler.js
+	@ $(ROLLUP) --bundleConfigAsCjs lib/riot.js --config $(CONFIG)rollup.config.js > $(DIST)riot.js
+	# UMD build with compiler
+	@ $(ROLLUP) --bundleConfigAsCjs lib/riot+compiler.js --config $(CONFIG)rollup.config.js > $(DIST)riot+compiler.js
 	# Chrome Security Policy build
-	@ $(ROLLUP) lib/riot.js --config $(CONFIG)rollup.config.csp.js > $(DIST)riot.csp.js
+	@ $(ROLLUP) --bundleConfigAsCjs lib/riot.js --config $(CONFIG)rollup.config.csp.js > $(DIST)riot.csp.js
 
 clean:
 	# clean $(DIST)
