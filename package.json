@@ -42,7 +42,6 @@
   ],
   "dependencies": {
     "@holdmyticket/hmt-riot-cli": "^2.7.0",
-    "riot-cli": "git+https://github.com//Holdmyticket/riot-cli.git#v2.4.0",
     "riot-compiler": "^3.5.2",
     "riot-observable": "^3.0.0",
     "riot-tmpl": "^3.0.8",
