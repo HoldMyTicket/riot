@@ -1,12 +1,13 @@
 {
-  "name": "riot",
-  "version": "3.14.1",
+  "name": "@holdmyticket/hmt-riot",
+  "version": "3.14.2",
   "description": "Simple and elegant component-based UI library",
   "homepage": "http://riot.js.org/",
-  "repository": "riot/riot",
+  "repository": "holdmyticket/riot",
   "author": "Riot maintainers team + smart people from all over the world",
   "contributors": [
-    "Gianluca Guarini https://github.com/GianlucaGuarini"
+    "Gianluca Guarini https://github.com/GianlucaGuarini",
+    "Michael Dahlke https://github.com/mdahlke"
   ],
   "license": "MIT",
   "engines": {
@@ -40,6 +41,7 @@
     "riot.js"
   ],
   "dependencies": {
+    "@holdmyticket/hmt-riot-cli": "^2.7.0",
     "riot-cli": "git+https://github.com//Holdmyticket/riot-cli.git#v2.4.0",
     "riot-compiler": "^3.5.2",
     "riot-observable": "^3.0.0",
@@ -95,5 +97,9 @@
   "main": "lib/server/index.js",
   "module": "lib/riot.js",
   "jsnext:main": "lib/riot.js",
-  "browser": "riot.js"
+  "browser": "riot.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }

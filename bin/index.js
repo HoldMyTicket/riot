@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require('riot-cli')._cli()
+require('@holdmyticket/hmt-riot-cli')._cli()
