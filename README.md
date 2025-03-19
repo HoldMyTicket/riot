@@ -1,10 +1,31 @@
 
 [![Riot logo](https://riot.js.org/img/logo/riot480x.png)](https://riot.js.org)
 
+## BUILD
+Update package.json with new version
 
-# IMPORTANT NEWS: Riot.js V4
+Run
+```
+make raw
+```
+Add and commit
 
-Riot.js@4 will be soon released. Make sure to check the new API and what's changed on https://riot.js.org/next/
+Tag the version
+```
+git tag -s vX.X.X -m 'vX.X.X'
+```
+
+Push it to Github
+```
+git push
+git push origin tag vX.X.X
+```
+
+### Publish to NPMJS
+```
+npm login
+npm publish
+```
 
 ## Simple and elegant component-based UI library
 
@@ -241,25 +262,7 @@ HTML syntax is the de facto language on the web and it's designed for building u
 - [Q&A with RiotJS author Tero Piirainen](http://www.triplet.fi/blog/q-and-a-with-riotjs-author-tero-piirainen/)
 - [riot-detector (Chrome Extension)](https://chrome.google.com/webstore/detail/riot-detector/cnnmjeggdmicjojlnjghdgkdlijiobke)
 
-### Editors / Editor Plugins (Syntax highlighting, autcompletion, etc...)
-- [riot (Atom Package)](https://atom.io/packages/riot)
-- [language-riot-tag (Atom Package)](https://github.com/dekimasoon/language-riot-tag)
-  - Based on Vue's official Sublime Text highlighter
-  - Note: Designed for html, not jade.
-- [sublime-tag (Sublime Text)](https://github.com/crisward/sublime-tag)
-- [riot-tag (Visual Studio)](https://github.com/crisward/riot-tag)
-- [web-mode (Emacs)](http://web-mode.org)
-  - See how to configure [#1967](https://github.com/riot/riot/issues/1967)
 
-### How to contribute
-
-If you are reading this it's already a good sign and we are thankful for it! We try our best working as much as we could on riot but your help is always appreciated.
-
-If you want to contribute to riot helping us maintaining the project please check first the list of [our open issues](https://github.com/riot/riot/issues) to understand whether there is a task where you could help.
-
-Riot is mainly developed on UNIX systems so you will be able to run all the commands necessary to build and test the library using our [Makefile](Makefile). If you are on a Microsoft machine it could be harder to set up you development environment properly.
-
-Following the steps below you should be able to properly submit your patch to the project
 
 #### 1) Clone the repo and browse to the riot folder
 
@@ -293,10 +296,6 @@ $ make watch
 # To bench riot
 $ make perf
 ```
-
-#### 5) Pull request only against the `dev` branch making sure you have read [our pull request template](.github/PULL_REQUEST_TEMPLATE.md)
-
-#### 6) Be patient
 
 
 ### Credits
