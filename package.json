@@ -1,6 +1,6 @@
 {
   "name": "@holdmyticket/hmt-riot",
-  "version": "3.15.0-alpha",
+  "version": "3.15.0",
   "description": "Simple and elegant component-based UI library",
   "homepage": "http://riot.js.org/",
   "repository": "holdmyticket/riot",
@@ -41,7 +41,7 @@
     "riot.js"
   ],
   "dependencies": {
-    "@holdmyticket/hmt-riot-cli": "^2.8.0-alpha",
+    "@holdmyticket/hmt-riot-cli": "^2.8.0",
     "riot-compiler": "^3.5.2",
     "riot-observable": "^3.0.0",
     "riot-tmpl": "^3.0.8",
