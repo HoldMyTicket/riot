@@ -34,7 +34,7 @@ eslint:
 	@ $(ESLINT) lib test
 
 test-mocha:
-	RIOT=../../dist/riot/riot.js $(MOCHA) -- test/specs/server
+	RIOT=../../dist/riot/riot.js $(MOCHA) --require test/helpers/node-setup.js -- test/specs/server
 
 tags:
 	@ $(RIOT_CLI) --silent test/tag dist/tags.js

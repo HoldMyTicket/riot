@@ -16,14 +16,11 @@ describe('Node', function() {
     return js.replace(/@version/, '1.0.0')
   }
 
-  it('require tags', function(done) {
-    glob('../../tag/*.tag', { cwd: __dirname }, function (err, tags) {
-      expect(err).to.be.equal(null)
-      tags.forEach(function(tag) {
-        if (/~/.test(tag)) return
-        expect(require(tag)).to.be.ok
-      })
-      done()
+  it('require tags', function() {
+    const files = glob.sync('../../tag/*.tag', { cwd: __dirname })
+    files.forEach(function(tag) {
+      if (/~/.test(tag)) return
+      expect(require(tag)).to.be.ok
     })
   })
 
