@@ -1,5 +1,5 @@
-const commonjs = require('rollup-plugin-commonjs'),
-  nodeResolve = require('rollup-plugin-node-resolve'),
+const commonjs = require('@rollup/plugin-commonjs'),
+  nodeResolve = require('@rollup/plugin-node-resolve'),
   buble = require('rollup-plugin-buble')
 
 module.exports = {

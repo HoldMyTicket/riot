@@ -31,7 +31,7 @@ test: eslint test-mocha test-karma
 
 eslint:
 	# check code style
-	@ $(ESLINT) -c ./.eslintrc.json lib test
+	@ $(ESLINT) lib test
 
 test-mocha:
 	RIOT=../../dist/riot/riot.js $(MOCHA) -- test/specs/server
@@ -40,9 +40,7 @@ tags:
 	@ $(RIOT_CLI) --silent test/tag dist/tags.js
 
 test-karma:
-  # Test riot+compiler.js
-	@ TEST_FOLDER=browser/compiler $(KARMA) start test/karma.conf.js
-	# Test only riot.js and generate the coverage
+  # Test only riot.js and generate the coverage
 	@ TEST_FOLDER=browser/riot $(KARMA) start test/karma.conf.js
 
 test-coveralls:
